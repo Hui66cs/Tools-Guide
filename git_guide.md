@@ -10,12 +10,20 @@ git config --global --get http.proxy #用于验证，若执行输出http://127.0
 
 若多人协作，建议各自创立一个branch，这样在merge的时候不容易报错
 ```bash
+初始化仓库时发布分支遇到问题
+git pull origin main --allow-unrelated-histories  #将远程main分支拉取到本地，允许合并不相关的历史记录
+
 git checkout -b [新分支名]  #创立一个新分支，并切换过去
 此时你的分支名仅创建在本地，需要发布到远程仓库
 git push -u origin [新分支名]  #将新分支发布到远程仓库，并将本地分支和远程分支关联。这样就可以正常使用了
 
 git branch #查看当前所有分支，*号表示当前所在分支
 git checkout [分支名] #切换到指定分支
+```
+
+拉取别人的仓库到本地
+```bash 
+git clone [仓库地址]
 ```
 
 **tips**
