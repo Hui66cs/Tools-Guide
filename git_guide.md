@@ -12,19 +12,21 @@ git config --global --get http.proxy #用于验证，若执行输出http://127.0
 ```bash
 初始化仓库时发布分支遇到问题
 git pull origin main --allow-unrelated-histories  #将远程main分支拉取到本地，允许合并不相关的历史记录
-
+git branch [新分支名]  #创立一个新分支,但没切换过去
+git checkout [分支名]  #切换到指定分支
 git checkout -b [新分支名]  #创立一个新分支，并切换过去
 此时你的分支名仅创建在本地，需要发布到远程仓库
 git push -u origin [新分支名]  #将新分支发布到远程仓库，并将本地分支和远程分支关联。这样就可以正常使用了
 
 git branch #查看当前所有分支，*号表示当前所在分支
-git checkout [分支名] #切换到指定分支
+git branch -d [分支名] #删除本地分支
 ```
 
 拉取别人的仓库到本地
 ```bash 
 git clone [仓库地址]
 ```
+此时本地仓库会自动与远程仓库关联，默认仓库名为origin
 
 **tips**
 1. git remote可以查看当前git仓库名
@@ -33,6 +35,8 @@ git clone [仓库地址]
 
 **Git常用命令汇总：**
 ```bash
+git init #将本地文件夹初始化为git仓库
+
 git status
 ## check the status of the working directory and staging area, red files are modified but not staged, green files are staged
 
