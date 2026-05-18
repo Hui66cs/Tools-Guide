@@ -9,11 +9,11 @@
 \usepackage{amsmath}   % 处理数学公式的宏包
 
 \title{文章标题}
-\author{你的名字}
-\date{\today}
+\author{你的名字}   
+\date{\today}  %如果不写，默认显示编译当天的日期
 
 \begin{document}       % [正文区] 开始
-\maketitle             % 打印标题页
+\maketitle             % 打印标题页，不写则不显示标题页
 
 这里写你的具体内容...
 
